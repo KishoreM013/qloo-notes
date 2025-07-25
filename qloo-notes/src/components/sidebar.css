@@ -1,0 +1,21 @@
+.sidebar{
+    background-color: rgb(5, 76, 76);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 98vh;
+    padding: 10px;
+}
+
+.top-part{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bottom-part{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-evenly;*/
+    gap: 6px;
+}

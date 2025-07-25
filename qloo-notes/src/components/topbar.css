@@ -1,0 +1,10 @@
+.topbar{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.icon{
+    margin-top: -4px;
+}
