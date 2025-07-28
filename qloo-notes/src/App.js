@@ -1,12 +1,14 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { cardData } from './resources/card_details';
 
-// Import your pages and the global sidebar
 import Home from './pages/home';
-import About from './pages/about'; // We'll keep this for the example
-import History from './pages/history'; // <-- Import the new History page
-import { Sidebar } from './components/sidebar'; // <-- Import the Sidebar
+import About from './pages/about'; 
+import History from './pages/history'; 
+
+import { Sidebar } from './components/sidebar'; // 
 import { NotFound } from './components/page_not_found';
+import ElementRenderer from './pages/ElementRenderer';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} /> 
+          <Route path="/elements/:id" element={<ElementRenderer items={cardData}/>}/>
           <Route path='/*' element={<NotFound/>}/> 
         </Routes>
       </div>

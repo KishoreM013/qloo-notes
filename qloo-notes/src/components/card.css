@@ -1,3 +1,7 @@
+*{
+    text-decoration: none;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@
     margin: 10px;
     width: 500px;
     height: 150px;
+    color: black;
 }
 
 .card:hover{
@@ -18,5 +23,6 @@
 
 .heading-part{
     font-weight: bold;
+    text-decoration: none;
 }
 
