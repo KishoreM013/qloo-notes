@@ -1,16 +1,27 @@
-.App{
-    display: flex;
-
-}
-
 .bodyPart{
     background-color: #ffffff;
     width: 100%;
-
 }
 
 .userName{
     font-weight: bold;
     font-size: xx-large;
     font-family: Broadway;
+    padding: 100px;
+    background-color: aqua;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
 }

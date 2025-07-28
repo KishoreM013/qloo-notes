@@ -1,29 +1,27 @@
 import './App.css';
-import { Sidebar } from './components/sidebar.js';
-import {useState} from "react";
+import { Routes, Route } from 'react-router-dom';
 
+// Import your pages and the global sidebar
+import Home from './pages/home';
+import About from './pages/about'; // We'll keep this for the example
+import History from './pages/history'; // <-- Import the new History page
+import { Sidebar } from './components/sidebar'; // <-- Import the Sidebar
+import { NotFound } from './components/page_not_found';
 
-
-// import {TopBar} from './components/topbar.js';
 function App() {
-    const [name, setName] = useState('Kuttie Koonjan');
-    const [count, setCount] = useState(0);
+  return (
+    <div className="App"> 
+      <Sidebar /> 
 
-
-    console.log (name);
-    return (
-        <div className="App">
-            <Sidebar/>
-            <div className='bodyPart'>
-                <div className='userName'>
-                   <h1>Count : {count}</h1>
-                    <button onClick={()=>{
-                        setCount (count + 1);
-                        console.log(count);
-                    }}>increment</button>
-                </div>
-            </div>
-        </div>
+      <div className="page-content">
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/history" element={<History />} /> 
+          <Route path='/*' element={<NotFound/>}/> 
+        </Routes>
+      </div>
+    </div>
   );
 }
 

@@ -1,0 +1,22 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 10px 15px 10px 10px;
+    background-color: rgb(59, 133, 133);
+    padding: 20px;
+    margin: 10px;
+    width: 500px;
+    height: 150px;
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(46, 46, 51);
+    transform: translateX(-2px);
+}
+
+.heading-part{
+    font-weight: bold;
+}
+
